@@ -25,5 +25,20 @@ print(module.x)
 if __name__ == "__main__":
     print("text, der nur ausgeführt wird, wenn main nur direkt gestartet wird")
 
+# global var
+t = "me"
+def fu():
+    def inner():
+        nonlocal var    # first option
+        global var      # second option
+        var = "inner"
+        print(var)
+    var = "fu"
+    print(var)
+    inner()
+var = "globalvar"
+print(var)
+fu()
+
 # errors
 all = de / 0
