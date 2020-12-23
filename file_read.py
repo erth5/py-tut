@@ -1,3 +1,4 @@
 if __name__ == "__main__":
-    F = open('file', 'r+')
-    print(f.read()
+    f = open('file', 'r')
+    for line in f:
+        print(line)
