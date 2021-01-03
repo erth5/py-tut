@@ -14,12 +14,16 @@ for i in range(5, 8, 2):
     v.append("hi")
     print(i)
 
+
 def fkt(l):
     if l == 1:
         return "deutsch"
+
+
 print(fkt(de))
 
 import module
+
 print(module.x)
 
 if __name__ == "__main__":
@@ -27,18 +31,48 @@ if __name__ == "__main__":
 
 # global var
 t = "me"
+
+
 def fu():
     def inner():
-        nonlocal var    # first option
-        global var      # second option
+        #nonlocal var1   first option
+        global var2  # second option
         var = "inner"
         print(var)
+
     var = "fu"
     print(var)
     inner()
+
+
 var = "globalvar"
 print(var)
 fu()
 
-# errors
-all = de / 0
+
+# Klassen mit Klassenvars in java static vars
+class uf:
+    time = 1937
+    sentence = "ha qu"
+
+    def funct(self, other_vars):
+        sentence = "qu hi"
+
+class uf_child(uf):
+    bonus = 42
+
+child = uf_child()
+print(child.time == child.bonus)
+
+instanz = uf() #instanzierung muss sein
+print(instanz.time)
+
+# konstruktoren mit instanzvars aolso local
+def __init__(self, other_warz):
+    self.varia = other_warz
+
+# exceptions = Klassen
+try:
+    all = de / 0
+except:
+    print("Zero Devision Error")
