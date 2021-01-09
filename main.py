@@ -76,3 +76,16 @@ try:
     all = de / 0
 except:
     print("Zero Devision Error")
+
+
+
+# dates
+import datetime
+
+x = datetime.datetime(2018, 6, 1)
+
+print(x.strftime("%B"))
+print(x.date())
+
+y = x - 33
+print(x, y)
